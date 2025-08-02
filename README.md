@@ -13,9 +13,9 @@ It showcases my frontend projects and layout skills.
 ## 🛠️ Technologies Used
 
 - HTML5
-- CSS3 (including Flexbox)
+- CSS3 (including Flexbox, Grid)
 - GitHub Pages for deployment
 
 ## 🌐 Live Demo
 
-👉 [View Portfolio]
+👉 [View Portfolio] https://divfocus.github.io/Portfolio/
