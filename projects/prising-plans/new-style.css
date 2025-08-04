@@ -19,7 +19,11 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 3em;
+}
+
+header h1 {
+  font-size: clamp(4rem, calc(9vw + 1rem), 6rem);
+  text-align: center;
 }
 
 main {
@@ -123,3 +127,4 @@ main {
     }
 
   }
+
