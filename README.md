@@ -7,7 +7,7 @@ It showcases my responsive layouts and UI experiments.
 
 ## 🔗 Projects Included
 
-- 📐 **Tow-Truck Landing** — responsive layout with Flexbox, Grid, and interactive JS features(based on a Figma design)
+- 📐 **Tow-Truck Landing** — responsive layout with Flexbox, Grid, and interactive JS features (based on a Figma design)
 - 🖥️ **Landing Page** — responsive layout for a fictional product
 - 💳 **Pricing Cards** — adaptive design for flexible pricing plans
 - 🖼️ **Image Gallery** — responsive gallery layout with grid
