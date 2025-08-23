@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+   <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta name="author" content="Dmytro Kazakov">
+   <meta name="description" content="Tow Truck Page — адаптивный лендінг по макету з Figma. HTML5, CSS3, Flexbox, Grid, JavaScript.">
+   <meta name="keywords" content="tow truck, landing page, figma, html, css, javascript, adaptive, responsive, frontend">
+   <meta property="og:title" content="Tow Truck Landing Page">
+   <meta property="og:description" content="Адаптивный лендінг с відеофоном, слайдером, модальным вікном та бургер-меню.">
+   <meta property="og:type" content="website">
+   <title>Tow Truck Landing Page</title>
+   <link rel="stylesheet" href="style.css">
+   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+   <link rel="icon" type="image/png" href="images/favicon.png">
+</head>
+
+<body>
+
+  <!----------------------------------Header-------------------------------->  
+
+  <header class="site-header">
+
+    <!-------------------------------- Desctop Header ----------------------->
+
+      <div class="container header-wrapper">
+          
+        <div class="logo">
+          <a href="#hero"><img src="images/logo.svg" alt="24/7 ЕВАКУАТОР"></a>
+        </div>
+          
+        <nav class="main-nav">
+            <ul>
+              <li><a href="#services">ПОСЛУГИ</a></li>
+              <li><a href="#benefits">ПЕРЕВАГИ</a></li>
+              <li><a href="#reviews">ВІДГУКИ</a></li>
+            </ul>
+        </nav>
+          
+        <div class="phone">
+            24/7  +38 (000) 111-22-33
+        </div>
+          
+        <div class="socials">
+            <a href="https://web.telegram.org/" target="_blank"><img src="images/telegram.svg" alt="Telegram"></a>
+            <a href="https://www.viber.com/" target="_blank"><img src="images/viber.svg" alt="Viber"></a>
+            <a href="https://web.whatsapp.com/" target="_blank"><img src="images/whatsapp.svg" alt="WhatsApp"></a>
+        </div>
+          
+        <div class="cta-button">
+            <a href="tel:+380001112233" class="btn">
+                <img src="images/phone-icon.svg" alt="" class="btn-icon">
+                ВИКЛИКАТИ ЕВАКУАТОР
+            </a>
+        </div>
+          
+      </div>
+
+    <!-------------------------------- Mobile Header ---------------------------------->
+
+    <div class="container mobile-wrapper">
+
+
+        <div class="logo">
+          <a href="#hero"><img src="images/logo.svg" alt="24/7 ЕВАКУАТОР"></a>
+        </div>
+
+      <div class="header-phone">
+        <span>Цілодобово</span> <span>+38 (099) 111-22-33</span>
+      </div>
+
+      <div class="header-mobile">
+        <button class="burger" aria-label="Відкрити меню">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <div class="mobile-cta-button">
+          <a href="tel:+380001112233" class="btn">ВИКЛИКАТИ ЕВАКУАТОР</a>
+        </div>
+      </div>
+    
+      <nav class="mobile-nav">
+        <ul>
+          <li><a href="#services">ПОСЛУГИ</a></li>
+          <li><a href="#benefits">ПЕРЕВАГИ</a></li>
+          <li><a href="#reviews">ВІДГУКИ</a></li>
+          <li><a href="#contacts">КОНТАКТИ</a></li>
+        </ul>
+      </nav>
+
+    </div>
+
+  </header>
+
+  <main>
+    <!--------------------------------------Gif + Blackout--------------------------------> 
+
+    <div class="hero-bg">
+      <video autoplay loop muted playsinline preload="auto" poster="images/evacuator.webp">
+        <source src="images/evacuator.mp4" type="video/mp4" media="(min-width: 941px)">
+        <source src="images/evacuator-mobile.webm" type="video/webm" media="(max-width: 940px)">
+        <source src="images/evacuator-mobile.mp4" type="video/mp4" media="(max-width: 940px)">
+        Your browser does not support the video tag.
+      </video>
+      <div class="overlay"></div>
+    </div>
+
+    <!--------------------------------------Hero Section-------------------------------->
+
+    <section class="hero container" id="hero">
+
+      <div class="hero-content">
+
+        <!-- Desktop Title -->
+          <h1 class="hero-title desktop-title">
+            <img src="images/evacuator-vector.svg" alt="Евакуатор у Вінниці - 24/7">
+          </h1>
+
+        <!-- Mobile Title -->
+          <h1 class="hero-title mobile-title">
+            <div class="mobile-title-wrapper">
+              <img src="images/evacuator-vector-1.svg" alt="Евакуатор">
+              <img src="images/evacuator-vector-2.svg" alt="у Вінниці - 24/7">
+            </div>
+          </h1>
+
+          <p class="hero-subtitle">Приїдемо за 20 хвилин. Цілодобово</p>
+          
+          <div class="hero-advantages">
+            <span>ШВИДКО</span>
+            <span class="dot">•</span>
+            <span>НАДІЙНО</span>
+            <span class="dot">•</span>
+            <span>НЕДОРОГО</span>
+          </div>
+
+          <div class="hero-buttons">
+            <div class="cta-button">
+              <a href="tel:+380001112233" class="btn">
+                <img src="images/phone-icon.svg" alt="" class="btn-icon">
+                ВИКЛИКАТИ ЕВАКУАТОР
+              </a>
+            </div>
+            <div class="consult-button">
+              <a href="#consult" class="btn-secondary">
+              БЕЗКОШТОВНА КОНСУЛЬТАЦІЯ
+              </a>
+            </div>
+          </div>
+      </div>
+
+    </section>
+    
+    <!--------------------------------------Services Section------------------------------->
+
+    <section class="services" id="services">
+
+      <div class="container">
+
+        <h2 class="section-title">Послуги евакуатора</h2>
+
+        <div class="section-subtitle">
+          <p>Професійне перевезення будь-якої техніки у Вінниці.</p>
+          <p>Легкові, вантажні, сільськогосподарські авто, спецтехніка</p>
+          <p>чи габаритні вантажі — усе доставимо безпечно та вчасно.</p>
+        </div>
+        
+        <div class="services-grid">
+
+          <div class="service-card">
+            <img src="images/img1.PNG" alt="Легкові авто">
+            <div class="overlay">
+              <p>Перевезення легкових та комерційних автомобілів у Вінниці</p>
+            </div>
+          </div>
+
+          <div class="service-card">
+            <img src="images/img2.PNG" alt="Вантажних автомобілі">
+            <div class="overlay">
+              <p>Перевезення вантажних автомобілів у Вінниці</p>
+            </div>
+          </div>
+
+          <div class="service-card">
+            <img src="images/img3.PNG" alt="Сільськогосподарська техніка">
+            <div class="overlay">
+              <p>Перевезення сільськогосподарської техніки у Вінниці</p>
+            </div>
+          </div>
+
+          <div class="service-card">
+            <img src="images/img4.PNG" alt="Габаритні вантажі">
+            <div class="overlay">
+              <p>Перевезення габаритних вантажів у Вінниці</p>
+            </div>
+          </div>
+
+          <div class="service-card">
+            <img src="images/img5.PNG" alt="Спецтехніка">
+            <div class="overlay">
+              <p>Перевезення спецтехніки у Вінниці</p>
+            </div>
+          </div>
+
+          <div class="service-card">
+            <img src="images/img6.PNG" alt="Кран Маніпулятор">
+            <div class="overlay">
+              <p>Кран Маніпулятор у Вінниці: Надійність та Професіоналізм</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!--------------------------------------Benefits Section------------------------------->
+
+    <section class="benefits" id="benefits">
+      <div class="container">
+        <h2 class="section-title">Чому обирають нас?</h2>
+
+        <div class="section-subtitle">
+          <p>Ми працюємо швидко, надійно й без перерв. </p>
+          <p>Кожна поїздка — це безпека, досвід і турбота про клієнта.</p>
+          <p>Ваше авто — у надійних руках 24/7.</p>
+        </div>
+
+        <div class="benefits-wrapper">
+
+          <div class="benefit">
+            <img src="images/icon1.svg" alt="Цілодобовий сервіс" class="benefit-icon" />
+            <h3 class="benefit-title">Цілодобовий сервіс</h3>
+            <p class="benefit-text">Допоможемо у будь-який час дня і ночі - без вихідних</p>
+          </div>
+
+          <div class="benefit">
+            <img src="images/icon2.svg" alt="Швидкий виїзд" class="benefit-icon" />
+            <h3 class="benefit-title">Швидкий виїзд</h3>
+            <p class="benefit-text">Оперативне реагування та прибуття на місце протягом 20 хвилин у межах міста</p>
+          </div>
+
+          <div class="benefit">
+            <img src="images/icon3.svg" alt="Досвідчені водії" class="benefit-icon" />
+            <h3 class="benefit-title">Досвідчені водії</h3>
+            <p class="benefit-text">Сертифіковані фахівці з багаторічним стажем</p>
+          </div>
+
+          <div class="benefit">
+            <img src="images/icon4.svg" alt="Прозоре ціноутворення" class="benefit-icon" />
+            <h3 class="benefit-title">Прозоре ціноутворення</h3>
+            <p class="benefit-text">Жодних прихованих платежів - тільки чесні тарифи
+              й попередній розрахунок</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+     <!--------------------------------------Reviews Section------------------------------->
+
+    <section class="reviews container" id="reviews">
+
+      <h2 class="section-title">Відгуки наших клієнтів</h2>
+
+        <div class="section-subtitle">
+          <p>Ми пишаємось довірою, яку нам висловлюють щодня.</p>
+          <p>Ваші слова — найкраще підтвердження нашої роботи.</p>
+          <p>Читайте реальні історії клієнтів, які вже скористались нашими послугами.</p>
+        </div>
+
+        <div class="review-wrapper">
+
+          <button class="arrow arrow-left" aria-label="Попередній відгук">
+            <img src="images/arrow-left.svg" alt="arrow-left">
+          </button>
+    
+          <div class="review-card" data-slide="active">
+            <img src="images/avatar.PNG" alt="Олександр К." class="review-avatar">
+            <h3 class="review-name">Олександр К.</h3>
+            <span class="review-date">5 ДНІВ ТОМУ</span>
+            <div class="review-stars">
+              <img src="images/star.svg" alt="звезда">
+              <img src="images/star.svg" alt="звезда">
+              <img src="images/star.svg" alt="звезда">
+              <img src="images/star.svg" alt="звезда">
+              <img src="images/star.svg" alt="звезда">
+            </div>
+            <p class="review-text">
+              Дуже вдячний! Приїхали за 20 хвилин, все швидко оформили і акуратно завантажили авто.
+              Видно, що працюють професіонали.
+            </p>
+            <div class="review-source">
+              <img src="images/google-icon.svg" alt="Google" class="review-source__icon">
+              <div class="review-source__text">
+                <p>ОПУБЛІКОВАНО</p>
+                <p>Google</p>
+              </div>
+            </div>
+          </div>
+    
+          <button class="arrow arrow-right" aria-label="Наступній відгук">
+            <img src="images/arrow-right.svg" alt="">
+          </button>
+
+        </div>
+
+    </section>
+
+    <!--------------------------------------Contact Section------------------------------->
+
+    <section class="contact-section" id="contacts">
+
+      <div class="contact-wrapper">
+
+        <div class="contact-form">
+
+          <h2 class="section-title">Зв’яжіться з нами</h2>
+
+          <div class="section-subtitle">
+            <p>Потрібна допомога чи консультація? Заповніть форму і наш</p>
+            <p>менеджер зв’яжеться з вами.</p>
+          </div>
+    
+          <form>
+            <div class="form-row">
+              <input type="text" name="name" placeholder="Ім'я *" required>
+              <input type="tel" name="phone" placeholder="Телефон *" required>
+            </div>
+    
+            <textarea name="comment" placeholder="Коментар *" required></textarea>
+    
+            <div class="contact-form__checkbox">
+              <input type="checkbox" name="privacy" class="contact-form__checkbox-input" id="privacy" required>
+              <label class="contact-form__checkbox-label" for="privacy">Я ознайомлений(а) і погоджуюсь з Політикою конфіденційності
+              </label>
+            </div>
+            
+            <button type="submit" class="btn-submit">НАДІСЛАТИ</button>
+          </form>
+        </div>
+    
+        <div class="contact-map">
+          <img src="images/map.png" alt="Карта">
+        </div>
+
+      </div>
+
+      <!-- Modal window and Overlay -->
+      <div class="modal-overlay" style="display: none;">
+        <div class="modal-content">
+          <button class="modal-close">×</button>
+          <h2 class="section-title">Ваш запит прийнятий</h2>
+          <div class="section-subtitle">
+            <p>Дякуємо, що звернулися — найближчим часом наш менеджер зв’яжеться з Вами.</p>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+  </main>
+
+    <!---------------------------------------------  Footer ------------------------------------->
+
+  <footer class="footer">
+
+    <div class="footer-top container">
+          <div class="footer-logo">
+            <a href="#hero"><img src="images/footer-logo.svg" alt="24/7 Евакуатор"></a>
+          </div>
+    
+          <nav class="footer-links">
+            <ul>
+              <li><a href="#services">ПОСЛУГИ</a></li>
+              <li><a href="#benefits">ПЕРЕВАГИ</a></li>
+              <li><a href="#reviews">ВІДГУКИ</a></li>
+            </ul>
+          </nav>
+    
+          <div class="footer-contacts">
+            <p>КОНТАКТИ</p>
+            <p><img src="images/phone-vector.svg" alt=""> +38 066 123 4567</p>
+            <p><img src="images/mail.svg" alt=""> gmail@gmail.com</p>
+            <p><img src="images/pin.svg" alt=""> Вінниця, Україна</p>
+          </div>
+    
+          <div class="footer-socials">
+            <a href="https://web.telegram.org/" target="_blank">
+              <span class="social-icon"><img src="images/telegram.svg" alt="Telegram"></span> TELEGRAM
+            </a>
+            <a href="https://www.viber.com/" target="_blank">
+              <span class="social-icon"><img src="images/viber.svg" alt="Viber"></span> VIBER
+            </a>
+            <a href="https://web.whatsapp.com/" target="_blank">
+              <span class="social-icon"><img src="images/whatsapp.svg" alt="WhatsApp"></span> WHATSAPP
+            </a>
+          </div>
+    </div>
+    
+    <hr>
+    
+    <div class="footer-bottom container">
+          <p>© 2025 24/7 ЕВАКУАТОР. ВСІ ПРАВА ЗАХИЩЕНІ.</p>
+          <a href="javascript:void(0)">ПОЛІТИКА КОНФІДЕНЦІЙНОСТІ</a>
+          <a href="javascript:void(0)">ПУБЛІЧНА ОФЕРТА</a>
+          <a href="https://freelancehunt.com/freelancer/Mila__Nikitina.html" target="_blank">
+            DESIGN BY MILA NIKITINA
+          </a>
+    </div>
+
+  </footer>
+
+  <script src="script.js" defer></script>  
+</body>
+
+</html>

@@ -14,7 +14,6 @@ body {
 
 header {
     height: clamp(200px, 30vw, 400px);
-    /*height: 400px;*/
     display: flex;
     justify-content: center;
     align-items: center;
